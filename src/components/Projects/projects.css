@@ -1,0 +1,151 @@
+.projects {
+	padding: 75px;
+	background-color: whitesmoke;
+	/* background-color: #dde6ed; */
+	text-align: center;
+}
+
+.projects__header {
+	font-size: 56px;
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 100px;
+	position: relative;
+}
+
+.projects__header::after {
+	content: "";
+	position: absolute;
+	width: 75%;
+	height: 3px;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -10px;
+	background-color: #696969;
+}
+
+.projects__container {
+	/* height: 800px; */
+	margin-bottom: 70px;
+	width: 100%;
+	display: grid;
+	column-gap: 60px;
+	row-gap: 60px;
+	grid-template-columns: repeat(auto-fit, 400px);
+	justify-content: center;
+}
+
+.project__card {
+	position: relative;
+	height: 520px;
+	width: 400px;
+	color: #ddd;
+	background-color: #282828;
+	border-radius: 17px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.product__card_img {
+	height: 87%;
+	width: 100%;
+	object-fit: fill;
+	transition: all 1s ease;
+}
+
+.project__details {
+	position: absolute;
+	padding: 0 20px;
+	top: 83%;
+	transition: all 0.5s ease;
+	font-size: 26px;
+}
+
+.project__card:hover .project__details {
+	padding: 160px 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	/* Glassmorphism */
+	background: rgba(255, 255, 255, 0.32);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+	border-radius: 10px;
+}
+
+.project__card:hover .product__card_img {
+	/* height: 100%; */
+	scale: 1.25;
+}
+
+.project__card:hover {
+	color: #282828;
+}
+
+@media screen and (max-width: 1280px) {
+	.projects {
+		padding: 50px 75px;
+	}
+	.projects__header {
+		font-size: 48px;
+		margin-bottom: 75px;
+	}
+	.projects__container {
+		gap: 50px;
+	}
+}
+
+/* 
+520/400 ::  */
+
+@media screen and (max-width: 1000px) {
+	.projects {
+		padding: 60px 50px;
+	}
+	.projects__container {
+		column-gap: 40px;
+		row-gap: 40px;
+		grid-template-columns: repeat(auto-fit, 250px);
+	}
+	.project__card {
+		width: 250px;
+		height: 325px;
+	}
+	.project__details {
+		font-size: 16px;
+	}
+}
+
+@media only screen and (max-width: 720px) {
+	.projects {
+		padding: 60px 10px;
+	}
+
+	.projects__header {
+		font-size: 40px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.projects {
+		padding: 40px 10px;
+	}
+
+	.projects__header {
+		margin: auto;
+	}
+
+	.projects__container {
+		padding-top: 60px;
+		padding-bottom: 60px;
+		margin-bottom: 0;
+		column-gap: 40px;
+		row-gap: 40px;
+		grid-template-columns: repeat(auto-fit, 200px);
+	}
+	.project__card {
+		width: 200px;
+		height: 260px;
+	}
+}
