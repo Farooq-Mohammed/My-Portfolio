@@ -23,6 +23,24 @@ const Projects = () => {
 			desc: "Promptopia is an open-source AI prompting tool for modern world to discover, create and share creative prompts",
 			link: "www.google.com",
 		},
+		{
+			src: `${Promptopia}`,
+			title: "Promptopia",
+			desc: "Promptopia is an open-source AI prompting tool for modern world to discover, create and share creative prompts",
+			link: "www.google.com",
+		},
+		{
+			src: `${Promptopia}`,
+			title: "Notes app",
+			desc: "Promptopia is an open-source AI prompting tool for modern world to discover, create and share creative prompts",
+			link: "www.google.com",
+		},
+		{
+			src: `${Promptopia}`,
+			title: "Promptopia",
+			desc: "Promptopia is an open-source AI prompting tool for modern world to discover, create and share creative prompts",
+			link: "www.google.com",
+		},
 	];
 
 	return (
@@ -32,7 +50,12 @@ const Projects = () => {
 				{projects.map((project, id) => {
 					return (
 						<div className="project__card" key={`project-${id}`}>
-							<img className="product__card_img" src={project.src} alt="" />
+							<div className="product__card_template">
+								<img src={project.src} alt="Title" />
+								<div className="product__card-footer">
+									<h3>{project.title}</h3>
+								</div>
+							</div>
 							<div className="project__details">
 								<h3 className="project__title">{project.title}</h3>
 								<p className="project__desc">{project.desc}</p>

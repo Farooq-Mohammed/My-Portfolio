@@ -13,8 +13,15 @@ import Python from "../../assets/python.png";
 import Reactjs from "../../assets/react.png";
 import Redux from "../../assets/redux.png";
 
-import Card from "../Card/Card";
 import "./skills.css";
+
+const Card = ({ title, url }) => {
+	return (
+		<div className="card">
+			<img src={url} alt={title} />
+		</div>
+	);
+};
 
 const Skills = () => {
 	const skillset = [
@@ -34,7 +41,7 @@ const Skills = () => {
 
 	return (
 		<div className="skills__set">
-			<h1 className="skills__title">Things I can do</h1>
+			<h1 className="skills__header">Things I can do</h1>
 			<div className="skills">
 				{skillset.map((skill, id) => (
 					<Card key={id} title={skill.title} url={skill.url} />

@@ -1,6 +1,6 @@
 .card {
-	width: 250px;
-	height: 200px;
+	/* width: 250px; */
+	height: 150px;
 	text-align: center;
 	box-sizing: border-box;
 	background: whitesmoke;
@@ -20,7 +20,7 @@
 }
 
 .card img {
-	height: 100px;
+	height: 80px;
 	aspect-ratio: 3/2;
 	object-fit: contain;
 }
@@ -34,7 +34,7 @@
 	transform: scale(0.95) rotateZ(1.7deg);
 }
 
-@media screen and (max-width: 1280px) {
+/* @media screen and (max-width: 1280px) {
 	.card {
 		width: 200px;
 		height: 160px;
@@ -42,9 +42,9 @@
 	.card img {
 		height: 90px;
 	}
-}
+} */
 
-@media screen and (max-width: 1000px) {
+/* @media screen and (max-width: 1000px) {
 	.card {
 		width: 150px;
 		height: 120px;
@@ -52,14 +52,14 @@
 	.card img {
 		height: 70px;
 	}
-}
+} */
 
 @media screen and (max-width: 600px) {
 	.card {
-		width: 90px;
-		height: 72px;
+		/* width: 90px; */
+		height: 100px;
 	}
 	.card img {
-		height: 40px;
+		height: 70px;
 	}
 }

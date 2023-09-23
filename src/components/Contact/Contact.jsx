@@ -21,40 +21,31 @@ const Contact = () => {
 					mail Phone number
 				</div>
 				<form className="contact__right" onSubmit={handleSubmit}>
-					<label>
-						<input
-							type="text"
-							name="name"
-							value={data.name}
-							onChange={handleChange}
-							placeholder="Name"
-							required
-						/>
-					</label>
-					<br />
-					<label>
-						<input
-							type="text"
-							name="email"
-							value={data.email}
-							onChange={handleChange}
-							placeholder="Email"
-							required
-						/>
-					</label>
-					<br />
-					<label>
-						<textarea
-							cols={45}
-							rows={12}
-							name="message"
-							value={data.message}
-							onChange={handleChange}
-							placeholder="Message..."
-							required
-						/>
-					</label>
-					<br />
+					<input
+						type="text"
+						name="name"
+						value={data.name}
+						onChange={handleChange}
+						placeholder="Name"
+						required
+					/>
+					<input
+						type="text"
+						name="email"
+						value={data.email}
+						onChange={handleChange}
+						placeholder="Email"
+						required
+					/>
+					<textarea
+						cols={45}
+						rows={12}
+						name="message"
+						value={data.message}
+						onChange={handleChange}
+						placeholder="Message..."
+						required
+					/>
 					<button type="submit" className="contact-btn">
 						Submit
 					</button>
