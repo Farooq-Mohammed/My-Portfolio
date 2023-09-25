@@ -18,14 +18,16 @@
 	grid-area: accounts;
 	justify-self: center;
 	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 	align-items: center;
 	gap: 10px;
 }
 
 .footer__links__container a {
+	position: relative;
 	padding: 10px;
 	font-size: 20px;
-	position: relative;
 }
 
 .footer__links__container a::after {
@@ -63,24 +65,39 @@
 			"logo contact";
 	}
 
-	.footer__desc {
-		grid-row: 1/3;
-	}
 	.footer__links__container {
 		justify-self: end;
 	}
 }
 
+@media only screen and (max-width: 770px) {
+	.footer-container {
+		padding: 45px 25px;
+	}
+}
+
 @media only screen and (max-width: 600px) {
 	.footer-container {
-		padding: 25px 30px;
-		gap: 20px;
-		grid-template-areas: ". accounts ." ". contact ." ". logo .";
+		padding: 45px 25px;
+		gap: 10px;
+		grid-template-areas: "logo" "contact" "accounts";
 	}
 
 	.footer__desc,
 	.footer__links__container,
 	.footer__contact {
 		justify-self: center;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.footer-container {
+		padding: 45px 25px;
+	}
+}
+
+@media only screen and (max-width: 430px) {
+	.footer-container {
+		padding: 25px 10px;
 	}
 }

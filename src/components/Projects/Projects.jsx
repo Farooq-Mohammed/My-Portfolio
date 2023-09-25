@@ -44,7 +44,7 @@ const Projects = () => {
 	];
 
 	return (
-		<div className="projects">
+		<div className="projects" id="works">
 			<h1 className="projects__header">Projects</h1>
 			<div className="projects__container">
 				{projects.map((project, id) => {
@@ -53,7 +53,7 @@ const Projects = () => {
 							<div className="product__card_template">
 								<img src={project.src} alt="Title" />
 								<div className="product__card-footer">
-									<h3>{project.title}</h3>
+									<h2>{project.title}</h2>
 								</div>
 							</div>
 							<div className="project__details">

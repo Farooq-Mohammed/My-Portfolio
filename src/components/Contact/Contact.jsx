@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import "./contact.css";
 
 const Contact = () => {
@@ -14,11 +15,21 @@ const Contact = () => {
 		e.preventDefault();
 	};
 	return (
-		<div className="contact__container">
+		<div className="contact__container" id="contact">
 			<div className="contact__content">
 				<div className="contact__left">
 					<h1 className="contact__header">Contact Me</h1>
-					mail Phone number
+					<div className="social-icons">
+						<a>
+							<i className="fab fa-facebook-square"></i>
+						</a>
+						<a>
+							<i className="fab fa-square-instagram"></i>
+						</a>
+						<a>
+							<i className="fab fa-linkedin"></i>
+						</a>
+					</div>
 				</div>
 				<form className="contact__right" onSubmit={handleSubmit}>
 					<input
@@ -26,7 +37,7 @@ const Contact = () => {
 						name="name"
 						value={data.name}
 						onChange={handleChange}
-						placeholder="Name"
+						placeholder="Your Name"
 						required
 					/>
 					<input
@@ -34,7 +45,7 @@ const Contact = () => {
 						name="email"
 						value={data.email}
 						onChange={handleChange}
-						placeholder="Email"
+						placeholder="Your Email"
 						required
 					/>
 					<textarea
@@ -43,7 +54,7 @@ const Contact = () => {
 						name="message"
 						value={data.message}
 						onChange={handleChange}
-						placeholder="Message..."
+						placeholder="Drop a note..."
 						required
 					/>
 					<button type="submit" className="contact-btn">

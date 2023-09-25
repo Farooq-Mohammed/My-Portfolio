@@ -40,7 +40,7 @@ const Skills = () => {
 	];
 
 	return (
-		<div className="skills__set">
+		<div className="skills__set" id="skills">
 			<h1 className="skills__header">Things I can do</h1>
 			<div className="skills">
 				{skillset.map((skill, id) => (

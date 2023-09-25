@@ -90,7 +90,6 @@
 
 @media only screen and (max-width: 900px) {
 	.about {
-		padding: 60px 50px;
 		flex-direction: column;
 		gap: 0;
 	}
