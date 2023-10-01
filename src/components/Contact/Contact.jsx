@@ -20,13 +20,13 @@ const Contact = () => {
 				<div className="contact__left">
 					<h1 className="contact__header">Contact Me</h1>
 					<div className="social-icons">
-						<a>
+						<a href="www.facebook.com">
 							<i className="fab fa-facebook-square"></i>
 						</a>
-						<a>
+						<a href="www.instagram.com">
 							<i className="fab fa-square-instagram"></i>
 						</a>
-						<a>
+						<a href="www.linkedin.com">
 							<i className="fab fa-linkedin"></i>
 						</a>
 					</div>

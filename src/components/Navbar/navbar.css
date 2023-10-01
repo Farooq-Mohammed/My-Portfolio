@@ -1,4 +1,8 @@
 .navbar__container {
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 200;
 	height: 40px;
 	padding: 25px 75px;
 	background-color: #272829;
@@ -57,13 +61,16 @@
 	}
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1120px) {
 	.navbar__container {
 		padding: 25px 50px;
 	}
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 770px) {
+	.navbar__container {
+		padding: 15px 25px;
+	}
 	.navbar__logo {
 		font-size: 24px;
 	}
@@ -75,7 +82,9 @@
 	}
 
 	.navbar__container {
-		position: relative;
+		position: sticky;
+		top: 0;
+		left: 0;
 	}
 
 	.navbar__menu {
@@ -85,13 +94,14 @@
 	.navbar__links {
 		position: absolute;
 		z-index: 10;
-		right: -100%;
+		right: 0;
 		top: 100%;
-		left: 0;
 		height: calc(100vh - 100%);
 		width: 0;
 		overflow: hidden;
-		justify-content: space-evenly;
+		padding-top: 100px;
+		gap: 75px;
+		/* justify-content: space-evenly; */
 		text-align: center;
 		flex-direction: column;
 		background-color: hsl(210, 3%, 22%);
@@ -109,6 +119,6 @@
 
 @media only screen and (max-width: 420px) {
 	.navbar__container {
-		padding: 25px 20px;
+		padding: 15px 10px;
 	}
 }

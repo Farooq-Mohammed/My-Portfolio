@@ -4,7 +4,6 @@ import "./navbar.css";
 
 const Navbar = () => {
 	const [selected, setSelected] = useState("home");
-	const [menuActive, setMenuActive] = useState(false);
 
 	return (
 		<div className="navbar__container">
@@ -43,33 +42,6 @@ const Navbar = () => {
 					Contact
 				</a>
 			</div>
-			{/* <div className="navbar__menu">
-				<i
-					className="fa-solid fa-bars"
-					onClick={() => {
-						setMenuActive((prev) => !prev);
-						console.log("Menu!!!");
-					}}
-				></i>
-				<div
-					className={
-						menuActive ? "navbar__menu_links active" : "navbar__menu_links"
-					}
-				>
-					<a onClick={() => setSelected("home")} href="#home">
-						Home
-					</a>
-					<a onClick={() => setSelected("about")} href="#about">
-						About
-					</a>
-					<a onClick={() => setSelected("works")} href="#works">
-						Works
-					</a>
-					<a onClick={() => setSelected("contact")} href="#contact">
-						Contact
-					</a>
-				</div>
-			</div> */}
 		</div>
 	);
 };
