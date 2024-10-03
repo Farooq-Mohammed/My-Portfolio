@@ -1,0 +1,161 @@
+.response-toolbar {
+	margin: 17px 12px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.response-toolbar .input {
+	padding: 10px;
+	font-size: 16px;
+	outline: none;
+	border: 1px solid rgba(0, 0, 0, 0.178);
+	border-radius: 5px;
+}
+
+.response-toolbar .search {
+	width: 270px;
+}
+.response-toolbar select {
+	width: 120px;
+}
+
+.response-toolbar .search:focus {
+	border: 1px solid rgba(0, 0, 0, 0.58);
+}
+
+.response-container {
+	position: relative;
+	margin: 5px 12px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.response-section {
+	flex: 1;
+	flex-basis: 265px;
+	max-width: 500px;
+	background: #fafafa;
+	padding: 7px 12px;
+	border: 1px solid rgba(0, 0, 0, 0.178);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.response-header {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.response-header > h3 {
+	margin: 12px 0;
+}
+
+.response-time {
+	color: gray;
+	text-align: right;
+}
+
+.response-message {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
+}
+
+.btn-group {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.btn-group button {
+	padding: 5px 10px;
+	border: none;
+	/* border: 1px solid rgba(0, 0, 0, 0.5); */
+	border-radius: 3px;
+}
+
+.btn-group .view {
+	color: #fff;
+	/* background-color: rgb(161, 161, 161); */
+	background-color: #526d82;
+}
+.btn-group .view:hover {
+	background-color: rgb(138, 138, 138);
+}
+.btn-group .checked {
+	color: #fff;
+	background: rgb(0, 182, 0);
+}
+.btn-group .checked:hover {
+	background: rgb(0, 142, 0);
+}
+
+/* POPUP */
+
+.popup {
+	position: fixed;
+	width: 75%;
+	max-width: 750px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #f1f1f1;
+	border: 1px solid rgba(0, 0, 0, 0.178);
+	box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.75);
+	z-index: 2;
+	animation: popup 0.4s ease;
+	overflow: auto;
+}
+
+.popup .response > * {
+	padding: 5px 22px;
+}
+.popup .response .name {
+	margin-bottom: 7px;
+}
+.popup .response .email {
+	margin: 0;
+}
+.popup .response .message {
+	max-height: 60vh;
+	overflow: auto;
+	margin: 12px 0;
+	padding: 5px 24px;
+	background-color: #ececec;
+}
+
+.close {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	width: 28px;
+	height: 28px;
+	text-align: center;
+	border: none;
+	color: white;
+	border-radius: 3px;
+	background-color: rgb(210, 0, 0);
+}
+.close:hover {
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+}
+.close:active {
+	background-color: rgb(130, 0, 0);
+}
+
+@keyframes popup {
+	0% {
+		opacity: 0.4;
+		top: 45%;
+	}
+	100% {
+		opacity: 1;
+		top: 50%;
+	}
+}

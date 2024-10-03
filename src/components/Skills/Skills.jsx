@@ -1,50 +1,53 @@
 import React from "react";
 
-import Java from "../../assets/java.png";
-import Javascript from "../../assets/javascript.png";
-import CSS from "../../assets/css.png";
-import Git from "../../assets/git.png";
-import Html from "../../assets/html.png";
-import Mongodb from "../../assets/mongodb.png";
-import Mysql from "../../assets/mysql.png";
-import Nextjs from "../../assets/nextjs.png";
-import Nodejs from "../../assets/nodejs.png";
-import Python from "../../assets/python.png";
-import Reactjs from "../../assets/react.png";
-import Redux from "../../assets/redux.png";
+import JavaSVG from "../../assets/svg/JavaSVG";
+import HtmlSVG from "../../assets/svg/HTMLSVG";
+import CssSVG from "../../assets/svg/CssSVG";
+import JavascriptSVG from "../../assets/svg/JavascriptSVG";
+import ReactSvg from "../../assets/svg/ReactSVG";
+import ReduxSVG from "../../assets/svg/ReduxSVG";
+import Bootstrap from "../../assets/svg/BootstrapSVG";
+import MaterialUISVG from "../../assets/svg/MaterialUISVG";
+import NextjsSVG from "../../assets/svg/NextjsSVG";
+import NodejsSVG from "../../assets/svg/NodejsSVG";
+import SpringbootSVG from "../../assets/svg/SpringbootSVG";
+import MongodbSVG from "../../assets/svg/MongodbSVG";
+import MySqlSVG from "../../assets/svg/MySqlSVG";
+import GitSVG from "../../assets/svg/GitSVG";
+import DockerSVG from "../../assets/svg/DockerSVG";
+import FigmaSVG from "../../assets/svg/FigmaSVG";
 
 import "./skills.css";
 
-const Card = ({ title, url }) => {
-	return (
-		<div className="card">
-			<img src={url} alt={title} />
-		</div>
-	);
-};
+const skills = [
+	{ id: 1, title: "Java", svg: JavaSVG },
+	{ id: 2, title: "HTML", svg: HtmlSVG },
+	{ id: 3, title: "CSS", svg: CssSVG },
+	{ id: 4, title: "JavaScript", svg: JavascriptSVG },
+	{ id: 5, title: "React", svg: ReactSvg },
+	{ id: 6, title: "Redux", svg: ReduxSVG },
+	{ id: 7, title: "Bootstrap", svg: Bootstrap },
+	{ id: 8, title: "Material UI", svg: MaterialUISVG },
+	{ id: 9, title: "Next.js", svg: NextjsSVG },
+	{ id: 10, title: "Node.js", svg: NodejsSVG },
+	{ id: 11, title: "Spring Boot", svg: SpringbootSVG },
+	{ id: 12, title: "MongoDB", svg: MongodbSVG },
+	{ id: 13, title: "MySQL", svg: MySqlSVG },
+	{ id: 14, title: "Git", svg: GitSVG },
+	{ id: 15, title: "Docker", svg: DockerSVG },
+	{ id: 16, title: "Figma", svg: FigmaSVG },
+];
 
 const Skills = () => {
-	const skillset = [
-		{ title: "Java", url: `${Java}` },
-		{ title: "Python", url: `${Python}` },
-		{ title: "Html", url: `${Html}` },
-		{ title: "CSS", url: `${CSS}` },
-		{ title: "JavaScript", url: `${Javascript}` },
-		{ title: "React JS", url: `${Reactjs}` },
-		{ title: "Redux", url: `${Redux}` },
-		{ title: "Node JS", url: `${Nodejs}` },
-		{ title: "Next JS", url: `${Nextjs}` },
-		{ title: "MySQL", url: `${Mysql}` },
-		{ title: "MongoB", url: `${Mongodb}` },
-		{ title: "Git", url: `${Git}` },
-	];
-
 	return (
-		<div className="skills__set" id="skills">
+		<div className="skills__set">
 			<h1 className="skills__header">Things I can do</h1>
-			<div className="skills">
-				{skillset.map((skill, id) => (
-					<Card key={id} title={skill.title} url={skill.url} />
+			<div className="container skills">
+				{skills.map((skill) => (
+					<div className="skill" id={skill.id} title={skill.title}>
+						<skill.svg size={50} />
+						<span>{skill.title}</span>
+					</div>
 				))}
 			</div>
 		</div>

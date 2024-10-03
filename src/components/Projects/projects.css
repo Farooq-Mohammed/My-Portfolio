@@ -31,7 +31,8 @@
 	justify-content: center;
 	gap: 60px;
 	/* grid-template-columns: repeat(auto-fit, minmax(300px, 20%)); */
-	grid-template-columns: repeat(auto-fit, minmax(22%, 1fr));
+	/* grid-template-columns: repeat(auto-fit, minmax(22%, 1fr)); */
+	grid-template-columns: repeat(auto-fit, 380px);
 }
 
 .project__card {

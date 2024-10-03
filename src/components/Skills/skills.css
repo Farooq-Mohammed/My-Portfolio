@@ -3,111 +3,85 @@
 	margin: 50px auto;
 }
 
+.skills__set > * {
+	/* outline: 1px solid black; */
+}
+
 .skills__header {
 	text-align: center;
-	font-size: 56px;
+	font-size: 60px;
 }
 
 .skills {
-	padding: 80px 0;
-	display: grid;
-	column-gap: 40px;
-	row-gap: 60px;
-	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-	justify-content: center;
-}
-
-.card {
-	/* width: 250px; */
-	height: 150px;
-	text-align: center;
-	box-sizing: border-box;
-	background: whitesmoke;
-	border: 1px solid white;
-	box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
-	backdrop-filter: blur(6px);
-	border-radius: 17px;
-	text-align: center;
-	cursor: pointer;
-	transition: all 0.5s;
+	margin-top: 50px;
 	display: flex;
-	align-items: center;
+	flex-wrap: wrap;
 	justify-content: center;
-	user-select: none;
-	font-weight: bolder;
-	color: black;
+	column-gap: 20px;
+	row-gap: 30px;
 }
 
-.card img {
-	height: 60%;
-	aspect-ratio: 3/2;
-	object-fit: contain;
+.skill {
+	padding: 15px 37.5px 15px 22.5px;
+	max-width: 190px;
+	flex: 1 0 fit-content;
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	border: 1px solid #22222230;
 }
 
-.card:hover {
-	border: 1px solid black;
-	transform: scale(1.05);
-}
-
-.card:active {
-	transform: scale(0.95) rotateZ(1.7deg);
+.skill span {
+	font-size: 22px;
+	font-weight: 600;
+	text-align: center;
 }
 
 @media screen and (max-width: 1120px) {
 	.skills__set {
 		padding: 0 50px;
 	}
-	.skills__header {
-		font-size: 45px;
-	}
 }
+
 @media screen and (max-width: 1000px) {
 	.skills__set {
 		margin: 40px auto;
 	}
+
 	.skills {
-		padding: 30px 10px;
-		column-gap: 30px;
-		row-gap: 40px;
+		gap: 20px;
+	}
+
+	.skill span {
+		font-size: 18px;
 	}
 }
 
 @media screen and (max-width: 770px) {
 	.skills__set {
 		padding: 0 25px;
+		margin: 30px auto;
 	}
 	.skills__header {
 		font-size: 38px;
 	}
 
-	.skills__set {
-		margin: 30px auto;
-	}
-	.skills__title {
-		font-size: 32px;
-	}
-	.skills {
-		padding: 20px 10px;
-		row-gap: 20px;
-		column-gap: 20px;
-		grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
-	}
-	.card {
-		height: 120px;
+	.skill {
+		padding: 15px 20px 10px;
 	}
 }
 
-@media screen and (max-width: 450px) {
-	.skills {
-		padding: 20px 10px;
-		row-gap: 20px;
-		column-gap: 20px;
-		grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+@media screen and (max-width: 550px) {
+	.skill {
+		gap: 10px;
+		flex-direction: column;
+		max-width: 120px;
+		flex: 1 0 70px;
 	}
-	.skills__set {
-		padding: 0 10px;
-	}
-	.card {
-		height: 90px;
+
+	.skill span {
+		font-size: 16px;
 	}
 }
